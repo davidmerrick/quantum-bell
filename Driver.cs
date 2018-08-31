@@ -14,9 +14,9 @@ namespace Bell
                 foreach (Result initial in initials)
                 {
                     var res = BellTest.Run(sim, 1000, initial).Result;
-                    var (numZeros, numOnes) = res;
+                    var (numZeros, numOnes, agree) = res;
                     System.Console.WriteLine(
-                        $"Init:{initial,-4} 0s={numZeros,-4} 1s={numOnes,-4}"
+                        $"Init:{initial,-4} 0s={numZeros,-4} 1s={numOnes,-4} agree={agree,-4}"
                     );
                 }
             }
