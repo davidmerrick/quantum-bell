@@ -1,4 +1,4 @@
-﻿namespace Quantum.Bell
+﻿namespace Bell
 {
     open Microsoft.Quantum.Primitive;
     open Microsoft.Quantum.Canon;
@@ -32,11 +32,11 @@
                         set numOnes = numOnes + 1;
                     }
                 }
-                Set(Zero, qubits[0])
-
-                // Return number of times we saw a |0> and number of times we saw a |1>
-                return (count - numOnes, numOnes);
+                Set(Zero, qubits[0]);
             }
+
+            // Return number of times we saw a |0> and number of times we saw a |1>
+            return (count-numOnes, numOnes);
         }
     }
 }
